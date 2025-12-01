@@ -15,6 +15,7 @@
 
 .flex {
   display: flex;
+  flex-direction: column;
 }
 
 .justify-content-center {
@@ -27,7 +28,11 @@
 
 body {
   background-image: url(https://cdn.vectorstock.com/i/500p/11/93/retro-vintage-mid-century-pattern-in-70s-style-vector-45091193.jpg);
-  
+
+}
+
+ul {
+  list-style: none;
 }
 
 /* Typography */
@@ -35,6 +40,7 @@ body {
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
 
 h1 {
   text-align: center;
@@ -44,9 +50,14 @@ h1 {
 }
 
 h2 {
-
+  color: #faa806;
 }
 
+h3 {
+
+  color: #83ccb8;
+text-shadow: 2px 2px 4px white;
+}
 
 /* HEADER */
 
@@ -63,17 +74,17 @@ header {
   height: auto;
   max-width: 70%;
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding: 10px 50px;
 }
 
 .card-title {
-padding: 5px 0;
-border-bottom: 1px solid #7dcfb8;
-color: #faa806;
+  padding: 5px 0;
+  border-bottom: 1px solid #7dcfb8;
+
 }
 
 .card-body {
-padding: 10px 0;
-color: rgb(0, 25, 29);
+  padding: 10px 0;
+  color: rgb(0, 25, 29);
 }

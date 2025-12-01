@@ -8,11 +8,13 @@ export default function BlogPosts() {
         "La magia delle piccole abitudini",
     ])
     const [newPost, setNewPost] = useState('')
-     return (
+    return (
         <>
             {post.map((title, index) => (
                 <li className='card-title' key={index}>
-                    {title}<button>x</button>
+                    {title}<button onClick={(event) => {setPost(post.filter((postFilter, postFilterIndex) => {
+                        return postFilterIndex !== index;
+                    }))}}>x</button>
                 </li>
             ))}
             <form onSubmit={(event) => {
@@ -21,7 +23,8 @@ export default function BlogPosts() {
                 setPost([...post, newPost]);
                 setNewPost('');
             }}>
-                <div className="blog-card"><input type='text' value={newPost} onChange={(event) => {setNewPost(event.target.value)}}/>
+                <div className="blog-card"><input type='text' value={newPost}
+                    onChange={(event) => { setNewPost(event.target.value) }} />
                     <button type='submit' className='submit'>Submit</button>
                 </div>
             </form>
